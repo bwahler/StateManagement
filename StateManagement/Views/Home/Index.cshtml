@@ -1,0 +1,14 @@
+﻿
+@if (ViewBag.CurrentUser == null)
+{
+    <h1>Welcome!</h1>
+}
+else
+{
+    <p>Hello, @ViewBag.CurrentUser.UserName</p>
+    <p>You are now logged in!</p>
+}
+@if (ViewBag.CurrentUser != null)
+{
+    @Html.ActionLink("Logout User", "Logout", "Home")
+}

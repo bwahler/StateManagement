@@ -1,0 +1,20 @@
+﻿<br />
+
+<form action="UserDetails" method="post" class="pure-form">
+    <fieldset>
+        <legend><b>Hello! Please register below:</b></legend>
+        <input type="text" name="FirstName" placeholder="FirstName" required class="form-control" /> <br />
+        <input type="text" name="LastName" placeholder="LastName" required class="form-control" /> <br />
+        <input type="text" name="UserName" placeholder="UserName" required class="form-control" /> <br />
+        <input type="email" name="Email" placeholder="Email" class="form-control" required /><br />
+        <input type="number" name="Age" placeholder="Age" class="form-control" required /><br />
+        <input type="password" name="password" placeholder="Password" required class="form-control" /><br />
+    </fieldset>
+    <input type="submit" value="Register User" />
+</form>
+
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <h3>@ViewBag.ErrorMessage</h3>
+}
