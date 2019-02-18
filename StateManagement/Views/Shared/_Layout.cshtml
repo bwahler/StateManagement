@@ -21,14 +21,26 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>                    
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     @if (ViewBag.CurrentUser == null)
                     {
                         <li>@Html.ActionLink("Login User", "Login", "Home")</li>
                     }
-                    @if(ViewBag.CurrentUser == null)
+                    @if (ViewBag.CurrentUser == null)
                     {
                         <li>@Html.ActionLink("Register User", "RegisterUser", "Home")</li>
+                    }
+                    @if (ViewBag.CurrentUser != null)
+                    {
+                        <li>@Html.ActionLink("Logout User", "Logout", "Home")</li>
+                    }
+                    @if (ViewBag.CurrentUser != null)
+                    {
+                        <li>@Html.ActionLink("Products", "ListItems", "Home")</li>
+                    }
+                    @if (ViewBag.CurrentUser != null)
+                    {
+                        <li>@Html.ActionLink("Cart", "Cart", "Home")</li>
                     }
                 </ul>
             </div>
@@ -38,7 +50,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Products to be proud of</p>
+            <p>&copy; @DateTime.Now.Year - Products to be proud of!</p>
         </footer>
     </div>
 

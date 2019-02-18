@@ -1,0 +1,18 @@
+﻿<h2>Cart</h2>
+
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var item in ViewBag.ShoppingCart)
+    {
+        <tr>
+            <td>@item.ItemName</td>
+            <td>@item.Description</td>
+            <td>@item.Price</td>
+            <td><a href="/Home/DeleteItem?itemName=@item.ItemName">Remove item from Cart</a></td>
+        </tr>
+    }
+</table>

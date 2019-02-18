@@ -30,11 +30,11 @@ namespace StateManagement.Models
         public string Password { get; set; }
 
 
-        public User(string firstName, string lastName, string username, string email, int age, string password)
+        public User(string firstName, string lastName, string userName, string email, int age, string password)
         {
             FirstName = firstName;
             LastName = lastName;
-            UserName = username;
+            UserName = userName;
             Email = email;
             Age = age;
             Password = password;
